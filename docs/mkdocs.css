@@ -1,0 +1,242 @@
+:root {
+  --md-primary-fg-color: #8FB9FF;
+  --md-accent-fg-color: #7A7CFF;
+
+  --md-default-bg-color: #0B0F14;
+  --md-default-fg-color: #E6EDF3;
+
+  --md-code-bg-color: #111827;
+  --md-code-fg-color: #E6EDF3;
+
+  --ice-muted: #9AA4B2;
+  --md-page-width: 100%;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: linear-gradient(180deg,
+      #0B0F14 0%,
+      #0E1420 40%,
+      #111827 100%);
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Layout */
+.md-container,
+.md-grid {
+  max-width: none;
+}
+
+.md-grid {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.md-main__inner {
+  max-width: 1280px;
+  margin-left: 0;
+  padding: 0 2.5rem;
+}
+
+.md-content {
+  padding-top: 1.5rem;
+}
+
+.md-main {
+  padding-left: 0;
+}
+
+.md-content {
+  background: transparent;
+}
+
+/* Typography */
+.md-typeset {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  letter-spacing: 0.002em;
+}
+
+.md-typeset h1 {
+  font-size: 1.7rem;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.25rem;
+  margin: 1.6rem 0 0.5rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.05rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.md-typeset p {
+  margin: 0.5em 0;
+  max-width: 70ch;
+}
+
+.md-typeset ul {
+  margin: 0.3em 0 0.5em 1.2em;
+}
+
+.md-typeset li {
+  margin: 0.2em 0;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SIDEBAR — CLEAN & CORRECT
+   ========================= */
+
+.md-sidebar {
+  background-color: #0B0F14;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.8rem;
+}
+
+.md-sidebar__inner {
+  padding: 0.75rem 0.6rem 1rem 0.6rem;
+}
+
+/* niente titolo duplicato */
+.md-nav__title {
+  display: none;
+}
+
+/* reset */
+.md-nav__item {
+  margin: 0;
+}
+
+/* ======================
+   SECTIONS (Concepts, ICE Engine…)
+   ====================== */
+.md-nav__item--section > .md-nav__link {
+  padding: 0.6rem 0.4rem 0.3rem;
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ice-muted);
+  cursor: default;
+}
+
+/* section NON evidenziabile */
+.md-nav__item--section > .md-nav__link--active {
+  background: none;
+  color: var(--ice-muted);
+}
+
+/* ======================
+   PAGES (tutte uguali)
+   ====================== */
+.md-nav__item:not(.md-nav__item--section) > .md-nav__link {
+  padding: 0.3rem 0.4rem 0.3rem 1.4rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  border-radius: 6px;
+  color: var(--md-default-fg-color);
+}
+
+/* hover */
+.md-nav__item:not(.md-nav__item--section) > .md-nav__link:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* active page */
+.md-nav__item:not(.md-nav__item--section) > .md-nav__link--active {
+  background: rgba(143, 185, 255, 0.14);
+  color: #E6EDF3;
+  font-weight: 500;
+}
+
+
+/* Topbar */
+.md-header {
+  width: 100%;
+  background: linear-gradient(90deg,
+      rgba(11, 15, 20, 0.95),
+      rgba(17, 24, 39, 0.95));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.md-search__form {
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Center Search */
+.md-header__inner {
+  max-width: none;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.md-header__inner>* {
+  min-width: 0;
+}
+
+.md-search {
+  margin: 0;
+  max-width: 320px;
+  width: 100%;
+  flex: 0 1 320px;
+}
+
+/* HERO */
+.ice-hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top,
+      rgba(143, 185, 255, 0.14),
+      transparent 60%);
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.ice-hero h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.ice-hero .tagline {
+  font-size: 1.2rem;
+  color: var(--md-primary-fg-color);
+  margin-top: 0.4rem;
+}
+
+.ice-hero .subtitle {
+  font-size: 0.95rem;
+  color: var(--ice-muted);
+  max-width: 640px;
+  margin-top: 1.2rem;
+}
