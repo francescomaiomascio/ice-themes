@@ -135,16 +135,7 @@ li a {
 
 /* ===== Layout shell ===== */
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: linear-gradient(to bottom,
-      rgba(11, 15, 20, 0.9),
-      rgba(11, 15, 20, 0.6));
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--border);
-}
+
 
 .nav {
   max-width: 1200px;
@@ -162,24 +153,10 @@ li a {
   gap: 1.5rem;
 }
 
-.site-main {
-  min-height: calc(100vh - 160px);
-}
-
-.site-footer {
-  position: relative;
-  padding: 1.5rem 2rem;
-  text-align: right;
-  font-size: 0.7rem;
-  color: var(--muted);
-  border-top: none;
-  opacity: 0.5;
-}
 
 
 
 .hero {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
